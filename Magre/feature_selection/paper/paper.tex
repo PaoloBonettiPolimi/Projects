@@ -1,0 +1,133 @@
+\documentclass[twoside]{article}
+
+\usepackage{aistats2019}
+% If your paper is accepted, change the options for the package
+% aistats2019 as follows:
+%
+%\usepackage[accepted]{aistats2019}
+%
+% This option will print headings for the title of your paper and
+% headings for the authors names, plus a copyright note at the end of
+% the first column of the first page.
+
+% If you set papersize explicitly, activate the following three lines:
+%\special{papersize = 8.5in, 11in}
+%\setlength{\pdfpageheight}{11in}
+%\setlength{\pdfpagewidth}{8.5in}
+
+% If you use natbib package, activate the following three lines:
+%\usepackage[round]{natbib}
+%\renewcommand{\bibname}{References}
+%\renewcommand{\bibsection}{\subsubsection*{\bibname}}
+
+% If you use BibTeX in apalike style, activate the following line:
+%\bibliographystyle{apalike}
+
+
+%CUSTOM PACKAGES
+\usepackage{amsthm,amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{xcolor}
+\usepackage{algorithm2e}
+\usepackage{dsfont}
+
+%TEXT
+\usepackage{xspace}
+\DeclareRobustCommand{\eg}{e.g.,\@\xspace}
+\DeclareRobustCommand{\ie}{i.e.,\@\xspace}
+\DeclareRobustCommand{\wrt}{w.r.t.\@\xspace}
+
+%THEOREMS
+\newtheorem{definition}{Definition}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{thr}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+
+%TODOS (customize as you like)
+%%todo by Mario
+\newcommand{\todomari}[1]{\todo[color=yellow, inline]{\small #1}}
+\newcommand{\todomariout}[1]{\todo[color=yellow]{\scriptsize #1}}
+%%todo by Alberto
+\newcommand{\todoalb}[1]{\todo[color=orange, inline]{\small #1}}
+\newcommand{\todoalbout}[1]{\todo[color=orange]{\scriptsize #1}}
+%%todo by Andrea
+\newcommand{\todoand}[1]{\todo[color=green, inline]{\small #1}}
+\newcommand{\todoandrout}[1]{\todo[color=green]{\scriptsize #1}}
+%%todo by Matteo
+\newcommand{\todomat}[1]{\todo[color=cyan, inline]{\small #1}}
+\newcommand{\todomatout}[1]{\todo[color=cyan]{\scriptsize #1}}
+%%todo by Marcello
+\newcommand{\todomarc}[1]{\todo[color=magenta, inline]{\small #1}}
+\newcommand{\todomarcout}[1]{\todo[color=magenta]{\scriptsize #1}}
+
+%MATH
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\mathbr}[1]{\bm{\mathrm{#1}}}
+\DeclareMathOperator*{\EV}{\mathbb{E}}
+\newcommand{\EVV}[2][\ppvect \in \ppspace]{\EV_{#1}\left[{#2}\right]}
+\DeclareMathOperator*{\Var}{\mathbb{V}ar}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+\begin{document}
+
+% If your paper is accepted and the title of your paper is very long,
+% the style will print as headings an error message. Use the following
+% command to supply a shorter title of your paper so that it can be
+% used as headings.
+%
+%\runningtitle{I use this title instead because the last one was very long}
+
+% If your paper is accepted and the number of authors is large, the
+% style will print as headings an error message. Use the following
+% command to supply a shorter version of the authors names so that
+% they can be used as headings (for example, use only the surnames)
+%
+%\runningauthor{Surname 1, Surname 2, Surname 3, ...., Surname n}
+
+\twocolumn[
+
+\aistatstitle{Title To Be Decided}
+
+\aistatsauthor{ Anonymous authors}
+
+\aistatsaddress{ Affiliations } ]
+
+\begin{abstract}
+  The Abstract paragraph should be indented 0.25 inch (1.5 picas) on
+  both left and right-hand margins. Use 10~point type, with a vertical
+  spacing of 11~points. The \textbf{Abstract} heading must be centered,
+  bold, and in point size 12. Two line spaces precede the
+  Abstract. The Abstract must be limited to one paragraph.
+\end{abstract}
+
+\section{Introduction}
+
+%\subsubsection*{Acknowledgements}
+%
+%Use the unnumbered third level heading for the acknowledgements.  All
+%acknowledgements go at the end of the paper.
+
+\subsubsection*{References}
+
+%References follow the acknowledgements.  Use an unnumbered third level
+%heading for the references section.  Any choice of citation style is
+%acceptable as long as you are consistent.  Please use the same font
+%size for references as for the body of the paper---remember that
+%references do not count against your page length total.
+
+\end{document}

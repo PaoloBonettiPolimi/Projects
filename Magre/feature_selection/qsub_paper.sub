@@ -1,0 +1,56 @@
+# @Author: mario
+# @Date:   2018-11-26T14:48:49+01:00
+# @Last modified by:   mario
+# @Last modified time: 2018-12-20T16:46:20+01:00
+
+
+
+#!/bin/bash
+#PBS -S /bin/bash
+
+#-----------------SETTING THE REQUEST FOR THE HARDWARE ALLOCATION----#
+
+#PBS -l nodes=1:ppn=20,walltime=48:00:00 -q gigat
+
+
+#PBS -N beraha_fs
+
+# Definizione del file di STDOUT e reindirzzamento dello STDERR
+# Set the output file and merge it to the sterr
+#PBS -o out-hostname-XyZ-N1x1-qsub.txt
+#PBS -j oe
+#PBS -e out-hostname-XyZ-N1x1.txt
+
+
+#------------------SETTING THE ENVIRONMENT----------------------------#
+#
+# Qui si possono introdurre definizioni ambientali, come il
+# caricamento dei moduli.
+# ATTENZIONE che questi comandi saranno eseguiti su un nodo solo,
+# quindi bisogna assicurarsi che le appropriate definizioni ambientali
+# vengano eseguite su tutti i nodi del calcolo (se più di uno)
+# ad esempio definendole nel file .bashrc
+# Here goes any environmental definition, such as module loading.
+# BEWARE that any command will be executed on one node only,
+# so take care of propagating any definition to every allocated node.
+# Environmental definitions can be alternatively set in the .bashrc file
+
+# PBS parte nella HOME, quindi cambiamo cartella per far partire il job nella
+# cartella corrente
+# Start the job in the current directory (PBS starts in the home folder)
+cd ${PBS_O_WORKDIR}
+
+# export MY_ENVIRONMENTAL_VARIABLE=value
+module load gcc-glibc/5
+
+
+
+#-------------------RUN THE EXECUTABLE---------------------------------#
+#
+# Nella riga successiva si deve scrivere il/i comando/i di lancio
+# completo di redirezione di input e/o output se necessario
+# YOUR LAUNCH COMMAND BELOW completed with I/O redirection if needed
+
+python3 -m scripts.run_real_data --dataset data/real/TOX_171.pickle  &> tox_171.out
+
+#---------------------------------------------------------------------#
